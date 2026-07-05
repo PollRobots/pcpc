@@ -410,16 +410,26 @@ export function matches<T>(parser: Parser<T>): Parser<void> {
   };
 }
 
-/** 
+/**
  * Matches and consumes surrounding whitespace.
- * 
+ *
  * The `options` parameter is used to control whether whitespace is optional (the default), or
  * required.
  */
-export function ws<T>(parser: Parser<T>, options?: WhitespaceOptions): Parser<T> {
+export function ws<T>(
+  parser: Parser<T>,
+  options?: WhitespaceOptions
+): Parser<T> {
   const leading = options?.requiredBefore ? /^\s+/ : /^\s*/;
   const trailing = options?.requiredAfter ? /^\s+/ : /^\s*/;
-  return map(sequence(regex(leading, () => {}), parser, regex(trailing, () => {})), ([_, v]) => v)
+  return map(
+    sequence(
+      regex(leading, () => {}),
+      parser,
+      regex(trailing, () => {})
+    ),
+    ([_, v]) => v
+  );
 }
 
 export type WhitespaceOptions = {
@@ -427,8 +437,7 @@ export type WhitespaceOptions = {
   requiredBefore?: boolean;
   /** Indicates whether trailing whitespace is required or optional.  */
   requiredAfter?: boolean;
-}
-
+};
 
 // Matches only when the inner parser matches the entire input.
 export function everything<T>(parser: Parser<T>): Parser<T> {
