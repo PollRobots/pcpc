@@ -2,6 +2,8 @@
 
 `pcpc` is a zero-dependency library that provides a small set of parser combinators that can be used for _adhoc_ parsing.
 
+[![npm version](https://badge.fury.io/js/@pollrobots%2Fpcpc.svg)](https://npmjs.com/package/@pollrobots/pcpc)
+
 ## Types
 
 The core types are
