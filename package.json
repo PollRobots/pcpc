@@ -1,0 +1,50 @@
+{
+  "name": "pcpc",
+  "version": "1.0.0",
+  "type": "module",
+  "license": "MIT",
+  "author": "Paul C. Roberts <pacaro@gmail.com>",
+  "description": "A lightweight parser-combinator library",
+  "keywords": [
+    "parser",
+    "parser combinator",
+    "typescript"
+  ],
+  "sideEffects": false,
+  "source": "./src/index.ts",
+  "exports": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "main": "./dist/index.js",
+  "module": "./dist/index.js",
+  "files": [
+    "dist",
+    "src",
+    "LICENSE",
+    "README.md"
+  ],
+  "scripts": {
+    "clean": "rm -rf dist",
+    "build": "npm run clean && tsc",
+    "format:check": "prettier --check \"src/**/*.ts\"",
+    "format": "prettier --write \"src/**/*.ts\"",
+    "lint": "eslint .",
+    "prepublishOnly": "npm run build",
+    "test": "vitest run",
+    "test:dev": "vitest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/PollRobots/pcpc.git"
+  },
+  "homepage": "https://github.com/PollRobots/pcpc",
+  "devDependencies": {
+    "@eslint/js": "^10.0.1",
+    "prettier": "^3.9.4",
+    "typescript": "^6.0.3",
+    "typescript-eslint": "^8.62.1",
+    "vitest": "^4.1.9"
+  },
+  "allowScripts": {
+    "fsevents@2.3.3": true
+  }
+}

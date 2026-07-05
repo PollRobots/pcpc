@@ -1,0 +1,30 @@
+{
+  "compilerOptions": {
+    "strict": true,
+    "allowUnusedLabels": false,
+    "allowUnreachableCode": false,
+    "exactOptionalPropertyTypes": true,
+    "noFallthroughCasesInSwitch": true,
+    "noImplicitOverride": true,
+    "noImplicitReturns": true,
+    "noPropertyAccessFromIndexSignature": true,
+    "noUncheckedIndexedAccess": true,
+    "noUnusedLocals": true,
+    "noUnusedParameters": true,
+    "noImplicitAny": true,
+    "noUncheckedSideEffectImports": false,
+
+    "rootDir": "./src/",
+    "outDir": "./dist/",
+    "sourceMap": true,
+    "importHelpers": true,
+    "module": "ESNext",
+    "target": "ESNext",
+    "moduleResolution": "bundler",
+    "esModuleInterop": true,
+    "lib": ["es6", "ES2019"],
+    "declaration": true
+  },
+  "include": ["./src/index.ts", "./src/parser.ts"],
+  "exclude": ["*.test.ts"],
+}
