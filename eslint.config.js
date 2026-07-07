@@ -4,10 +4,7 @@ import { configs } from "typescript-eslint";
 
 export default defineConfig(
   {
-    ignores: [
-      "./dist/**/*",
-      "./prettier.config.js",
-    ],
+    ignores: ["./dist/**/*", "./prettier.config.js", "./rollup.config.js"],
   },
   js.configs.recommended,
   ...configs.recommended,
@@ -21,8 +18,7 @@ export default defineConfig(
         },
       },
     },
-    settings: {
-    },
+    settings: {},
     rules: {
       "@typescript-eslint/no-unused-vars": [
         "error",
