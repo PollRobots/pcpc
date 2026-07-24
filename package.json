@@ -1,6 +1,6 @@
 {
   "name": "@pollrobots/pcpc",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "type": "module",
   "license": "MIT",
   "author": "Paul C. Roberts <pacaro@gmail.com>",
@@ -12,10 +12,18 @@
   ],
   "sideEffects": false,
   "source": "./src/index.ts",
-  "exports": "./dist/index.js",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.js",
+      "require": "./dist/index.umd.js",
+      "default": "./dist/index.umd.js"
+    }
+  },
   "types": "./dist/index.d.ts",
-  "main": "./dist/index.js",
+  "main": "./dist/index.umd.js",
   "module": "./dist/index.js",
+  "unpkg": "dist/index.umd.js",
   "files": [
     "dist",
     "src",
